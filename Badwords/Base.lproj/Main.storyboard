@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Badwords" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xaW-fN-npS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThS-KD-Z0T">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a password below, and press &quot;check&quot;. I'll tell you what's wrong with it." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGm-ZG-XD5">
+                                                <rect key="frame" x="10.5" y="9" width="393" height="350"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="CGm-ZG-XD5" firstAttribute="height" secondItem="ThS-KD-Z0T" secondAttribute="height" multiplier="0.95" id="IQl-QJ-lXJ"/>
+                                            <constraint firstItem="CGm-ZG-XD5" firstAttribute="width" secondItem="ThS-KD-Z0T" secondAttribute="width" multiplier="0.95" id="cca-q3-Eir"/>
+                                            <constraint firstItem="CGm-ZG-XD5" firstAttribute="centerY" secondItem="ThS-KD-Z0T" secondAttribute="centerY" id="hCC-C0-D1u"/>
+                                            <constraint firstItem="CGm-ZG-XD5" firstAttribute="centerX" secondItem="ThS-KD-Z0T" secondAttribute="centerX" id="u3H-1W-xnW"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qcW-Pr-g5E">
+                                        <rect key="frame" x="0.0" y="368" width="414" height="82"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZS-6x-xOv">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbs-JL-UFL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="82"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="300" id="Qus-kR-q9w"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfd-42-vec">
+                                                        <rect key="frame" x="300" y="0.0" width="114" height="82"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Check it"/>
+                                                        <connections>
+                                                            <action selector="checkPasswordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C4J-rv-dqy"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="oZS-6x-xOv" secondAttribute="bottom" id="4eu-rN-RHV"/>
+                                            <constraint firstItem="oZS-6x-xOv" firstAttribute="width" secondItem="qcW-Pr-g5E" secondAttribute="width" id="iBd-d6-Rht"/>
+                                            <constraint firstItem="oZS-6x-xOv" firstAttribute="leading" secondItem="qcW-Pr-g5E" secondAttribute="leading" id="ljp-m9-uph"/>
+                                            <constraint firstItem="oZS-6x-xOv" firstAttribute="top" secondItem="qcW-Pr-g5E" secondAttribute="top" id="tXr-IG-N19"/>
+                                            <constraint firstAttribute="trailing" secondItem="oZS-6x-xOv" secondAttribute="trailing" id="taC-Ns-1dF"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJa-zK-TAJ">
+                                        <rect key="frame" x="0.0" y="450" width="414" height="368"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="KJa-zK-TAJ" firstAttribute="height" secondItem="xaW-fN-npS" secondAttribute="height" multiplier="0.45" id="54q-gb-rQl"/>
+                                    <constraint firstItem="qcW-Pr-g5E" firstAttribute="height" secondItem="xaW-fN-npS" secondAttribute="height" multiplier="0.1" id="sq8-Fd-n1J"/>
+                                    <constraint firstItem="ThS-KD-Z0T" firstAttribute="height" secondItem="xaW-fN-npS" secondAttribute="height" multiplier="0.45" id="zOt-1U-PFG"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xaW-fN-npS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FBX-hG-nPX"/>
+                            <constraint firstItem="xaW-fN-npS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Zh5-XD-Z1c"/>
+                            <constraint firstItem="xaW-fN-npS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cr5-II-kQn"/>
+                            <constraint firstItem="xaW-fN-npS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oIf-eg-kMH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="checkPassword" destination="Yfd-42-vec" id="Xhd-CP-gDw"/>
+                        <outlet property="explanation" destination="CGm-ZG-XD5" id="dKk-h4-vma"/>
+                        <outlet property="password" destination="cbs-JL-UFL" id="YSB-ov-6CX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
